@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "moment-timezone": "^0.5.45",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
