@@ -13,10 +13,10 @@ This project was created as solution for https://gist.github.com/naymkazp/8b2fd6
 ```git clone https://github.com/RustamKhananov/fees.git```
 
 ### Install dependencies
-npm i
+```npm i```
 
 ### Run index file
-node index.js input.json 
+```node index.js input.json``` 
 
 ## To start tests locally
-npm test
+```npm test```
