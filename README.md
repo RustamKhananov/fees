@@ -10,7 +10,7 @@ This project was created as solution for https://gist.github.com/naymkazp/8b2fd6
 ## To start project locally
 
 ### Clone project
-git clone https://github.com/RustamKhananov/fees.git
+```git clone https://github.com/RustamKhananov/fees.git```
 
 ### Install dependencies
 npm i
