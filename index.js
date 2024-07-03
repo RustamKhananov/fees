@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Customer = require('./customer')
+const CashDescOperation = require('./cashDescOperation')
 
 const inputFilePath = process.argv[2];
 
@@ -25,14 +26,21 @@ const proceedAllOperations = async () => {
       customersMapToId[userId] = new Customer({ id: userId, userType })
     }
 
-    const fee = await customersMapToId[userId].proceedCashDeskOperation({
+    const operation = new CashDescOperation({ 
+      userType,
+      proceededOperations: customersMapToId[userId].proceededOperations
+    })
+
+    const operationResult = await operation.proceed({
       currency,
       date,
       amount,
       type
     })
 
-    console.log(fee)
+    customersMapToId[userId].saveInfoAboutProceedingOperation(operationResult)
+
+    console.log(operationResult.fee)
   }
 }
 
